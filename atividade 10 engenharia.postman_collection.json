@@ -1,0 +1,354 @@
+{
+	"info": {
+		"_postman_id": "4caf133f-ec7e-42b2-bec0-8a2bf01c1669",
+		"name": "atividade 10 engenharia",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23532535"
+	},
+	"item": [
+		{
+			"name": "departamentos",
+			"item": [
+				{
+					"name": "departamento",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\": \"contabilidade\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL}}/api/departamento",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"api",
+								"departamento"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "departamentos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/api/departamentos",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"api",
+								"departamentos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "departamento",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/api/departamento/1",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"api",
+								"departamento",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\": \"finanças atualizado\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL}}/api/departamento/1",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"api",
+								"departamento",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "departamento",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/api/departamento/1",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"api",
+								"departamento",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "funcionarios",
+			"item": [
+				{
+					"name": "funcionario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\": \"Pedro de Alcântara João Carlos Leopoldo Salvador Bibiano Francisco Xavier de Paula Leocádio Miguel Gabriel Rafael Gonzaga\",\n    \"email\": \"imperial@gmail.com\",\n    \"id_deparatamento\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL}}/api/funcionario",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"api",
+								"funcionario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "funcionarios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/api/funcionarios",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"api",
+								"funcionarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "funcionario",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/api/funcionario/1",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"api",
+								"funcionario",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "funcionario",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"departamento_id\": 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL}}/api/funcionario/1",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"api",
+								"funcionario",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "funcionario",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/api/funcionario/1",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"api",
+								"funcionario",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "departamentos e funcionarios",
+			"item": [
+				{
+					"name": "funcionarios com seus departamentos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/api/funcionarios/departamentos",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"api",
+								"funcionarios",
+								"departamentos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "departamentos com seus funcionarios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/api/departamentos/funcionarios",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"api",
+								"departamentos",
+								"funcionarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "departamento de um funcionario",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/api/funcionario/departamento/1",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"api",
+								"funcionario",
+								"departamento",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "funcionarios de um departamento",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/api/departamento/funcionarios/1",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"api",
+								"departamento",
+								"funcionarios",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "API_URL",
+			"value": "http://127.0.0.1:8000",
+			"type": "string"
+		}
+	]
+}
